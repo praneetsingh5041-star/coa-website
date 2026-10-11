@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Academic Portfolio</title>
+    <meta
+      property="og:description"
+      content="A modern academic portfolio for university students."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <!-- ===== LOADING ANIMATION ===== -->
+    <div id="loader" class="loader">
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Loading Portfolio…</p>
+    </div>
+
+    <!-- ===== STICKY NAVIGATION BAR ===== -->
+    <header id="navbar" class="navbar">
+      <nav class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="nav-logo-mark">SP</span>
+          <span class="nav-logo-text">Student Portfolio</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#coa" class="nav-link">COA Rules</a></li>
+          <li>
+            <a href="#converter" class="nav-link">Converter</a>
+          </li>
+          <li><a href="#assignments" class="nav-link">Assignments</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle dark / light mode"
+            title="Toggle dark / light mode"
+          >
+            <svg
+              class="icon-sun"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Open / close menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HOME / HERO ===== -->
+      <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content reveal">
+          <div class="hero-card">
+            <!-- ===== EDIT: Replace this placeholder with your profile photo ===== -->
+            <div class="profile-photo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <div class="hero-info">
+              <p class="hero-eyebrow">Welcome to my academic portfolio</p>
+              <!-- ===== EDIT: Replace with your name ===== -->
+              <h1 class="hero-name">Praneet Singh</h1>
+              <div class="hero-meta">
+                <!-- ===== EDIT: Replace with your UID ===== -->
+                <span class="meta-pill" data-label="UID">25BAI10031</span>
+                <!-- ===== EDIT: Replace with your semester ===== -->
+                <span class="meta-pill" data-label="Semester">Semester 3</span>
+                <!-- ===== EDIT: Replace with your course ===== -->
+                <span class="meta-pill" data-label="Course"
+                  >B.Tech CSE (AI)</span
+                >
+              </div>
+              <p class="hero-welcome">
+                A dedicated learner passionate about computer architecture,
+                problem-solving and building meaningful projects. Explore my
+                journey below.
+              </p>
+              <a href="#about" class="btn btn-primary btn-lg">
+                Explore My Portfolio
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ===== ABOUT ME ===== -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">About</span>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              Get to know my background, interests and aspirations.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Introduction -->
+            <article class="about-card reveal">
+              <div class="about-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </div>
+              <h3>Introduction</h3>
+              <!-- ===== EDIT: Replace with your introduction ===== -->
+              <p>
+                I am a university student pursuing a degree in Computer Science
+                & Engineering. I enjoy learning how computers work at a
+                fundamental level and applying that knowledge to solve
+                real-world problems.
+              </p>
+            </article>
+
+            <!-- Academic Interest -->
+            <article class="about-card reveal">
+              <div class="about-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <h3>Academic Interest</h3>
+              <!-- ===== EDIT: Replace with your academic interests ===== -->
+              <p>
+                My primary academic interests include Computer Organization &
+                Architecture, digital logic design, algorithms, and systems
+                programming. I am also curious about embedded systems and
+                low-level performance optimization.
+              </p>
+            </article>
+
+            <!-- Future Goals -->
+            <article class="about-card reveal">
+              <div class="about-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+              </div>
+              <h3>Future Goals</h3>
+              <!-- ===== EDIT: Replace with your future goals ===== -->
+              <p>
+                I aim to deepen my expertise in computer architecture and pursue
+                a career in systems design or research. I also plan to
+                contribute to open-source projects and mentor younger students
+                in technology.
+              </p>
+            </article>
+
+            <!-- CV -->
+            <article class="about-card about-card-cv reveal">
+              <div class="about-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+              </div>
+              <h3>CV / Resume</h3>
+              <p>
+                Download or view my curriculum vitae to learn more about my
+                academic background, skills and projects.
+              </p>
+              <div class="cv-buttons">
+                <!-- ===== EDIT: Replace assets/cv.pdf with your CV file path ===== -->
+                <a
+                  href="WhatsApp_Image_2026-10-10_at_3.17.13_PM.jpeg"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-primary"
+                >
+                  View CV
+                </a>
+                <!-- ===== EDIT: Replace assets/cv.pdf with your CV file path ===== -->
+                <a href="WhatsApp_Image_2026-10-10_at_3.17.13_PM.jpeg" download class="btn btn-secondary">
+                  Download CV
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COA LEARNING RULES ===== -->
+      <section id="coa" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">COA</span>
+            <h2 class="section-title">COA Learning Rules</h2>
+            <p class="section-subtitle">
+              Computer Organization & Architecture — key concepts and notes.
+              Click any card to expand or collapse its content.
+            </p>
+          </div>
+
+          <div class="coa-grid" id="coaGrid">
+            <!-- Cards are generated by script.js from the coaTopics array.
+                 You can also edit the content directly in script.js. -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== NUMBER SYSTEM CONVERTER ===== -->
+      <section id="converter" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Tool</span>
+            <h2 class="section-title">Number System Converter</h2>
+            <p class="section-subtitle">
+              Convert between Binary, Decimal, Octal and Hexadecimal with
+              real-time validation.
+            </p>
+          </div>
+
+          <div class="converter-card reveal">
+            <div class="converter-row">
+              <!-- Input -->
+              <div class="converter-field">
+                <label for="convInput" class="converter-label">
+                  Input Value
+                </label>
+                <input
+                  type="text"
+                  id="convInput"
+                  class="converter-input"
+                  placeholder="Enter a number"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+                <label for="convFrom" class="converter-label converter-label-sm">
+                  From
+                </label>
+                <select id="convFrom" class="converter-select">
+                  <option value="binary">Binary (base 2)</option>
+                  <option value="decimal" selected>Decimal (base 10)</option>
+                  <option value="octal">Octal (base 8)</option>
+                  <option value="hexadecimal">Hexadecimal (base 16)</option>
+                </select>
+              </div>
+
+              <!-- Swap -->
+              <button
+                id="convSwap"
+                class="btn btn-icon"
+                aria-label="Swap input and output"
+                title="Swap input and output"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 3l4 4-4 4M20 7H4M8 21l-4-4 4-4M4 17h16"
+                  />
+                </svg>
+              </button>
+
+              <!-- Output -->
+              <div class="converter-field">
+                <label for="convOutput" class="converter-label">
+                  Output Value
+                </label>
+                <input
+                  type="text"
+                  id="convOutput"
+                  class="converter-input converter-output"
+                  readonly
+                  placeholder="Result appears here"
+                />
+                <label for="convTo" class="converter-label converter-label-sm">
+                  To
+                </label>
+                <select id="convTo" class="converter-select">
+                  <option value="binary" selected>Binary (base 2)</option>
+                  <option value="decimal">Decimal (base 10)</option>
+                  <option value="octal">Octal (base 8)</option>
+                  <option value="hexadecimal">Hexadecimal (base 16)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="convError" class="converter-error" role="alert"></div>
+
+            <div class="converter-actions">
+              <button id="convConvert" class="btn btn-primary">Convert</button>
+              <button id="convClear" class="btn btn-secondary">Clear</button>
+              <button id="convCopy" class="btn btn-secondary">
+                Copy Result
+              </button>
+            </div>
+
+            <!-- Conversion History -->
+            <div class="converter-history" id="convHistoryWrap">
+              <div class="history-header">
+                <h4>Conversion History</h4>
+                <button id="convClearHistory" class="btn btn-ghost btn-sm">
+                  Clear History
+                </button>
+              </div>
+              <ul id="convHistory" class="history-list">
+                <li class="history-empty">No conversions yet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ASSIGNMENTS ===== -->
+      <section id="assignments" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Work</span>
+            <h2 class="section-title">Assignments</h2>
+            <p class="section-subtitle">
+              Upload, manage and download your assignments. Metadata is stored
+              locally in your browser — connect cloud storage later for
+              permanent uploads.
+            </p>
+          </div>
+
+          <div class="assignment-layout">
+            <!-- Upload form -->
+            <div class="assignment-form-card reveal">
+              <h3>Upload Assignment</h3>
+              <form id="assignmentForm">
+                <div class="form-group">
+                  <label for="asgName">Assignment Name</label>
+                  <input
+                    type="text"
+                    id="asgName"
+                    placeholder="e.g. Assignment 1 — COA"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="asgSubject">Subject</label>
+                  <input
+                    type="text"
+                    id="asgSubject"
+                    placeholder="e.g. Computer Organization"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="asgFile">Select File</label>
+                  <input type="file" id="asgFile" required />
+                </div>
+                <div id="asgError" class="converter-error" role="alert"></div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Upload Assignment
+                </button>
+              </form>
+            </div>
+
+            <!-- Assignment list -->
+            <div class="assignment-list-area reveal">
+              <div class="assignment-list-header">
+                <h3>Submitted Assignments</h3>
+                <span id="asgCount" class="asg-count">0</span>
+              </div>
+              <div id="assignmentList" class="assignment-list">
+                <p class="assignment-empty">
+                  No assignments uploaded yet. Use the form to add your first
+                  one.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">SP</span>
+          <div>
+            <!-- ===== EDIT: Replace with your name ===== -->
+            <p class="footer-name">Praneet Singh</p>
+            <!-- ===== EDIT: Replace with your course ===== -->
+            <p class="footer-course">B.Tech CSE (AI)</p>
+            <!-- ===== EDIT: Replace with your UID ===== -->
+            <p class="footer-uid">UID: 25BAI10031</p>
+          </div>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#coa">COA Rules</a></li>
+            <li><a href="#converter">Converter</a></li>
+            <li><a href="#assignments">Assignments</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Praneet Singh. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>
